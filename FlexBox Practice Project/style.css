@@ -1,0 +1,83 @@
+*{
+    font-family: Helvetica, sans-serif;
+    color: seashell;
+    background-color: black;
+}
+
+.header{
+    height: 69px;
+    background-image: url(./img-tea-cozy-logo.png);
+    background-size: auto;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid seashell;
+    padding-bottom: 20px;
+}
+
+.breadcrumb{
+    display: flex;
+    width: 400px;
+    display: inline-flex;
+    float: right;
+    font-size: 22px;
+    text-decoration: underline;
+    list-style: none;
+}
+
+.mission{
+    padding: 10px;
+}
+
+.tea{
+    padding: 10px;
+}
+
+.location{
+    padding: 10px;
+}
+
+/*introduction part is starting*/
+
+.introduction{
+    display: flex;
+    text-align: center;
+    width: 100%;
+    height: 700px;
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav{
+    justify-content: center;
+    width: 100%;
+    padding-top: 250px;
+    background-image:url(./img-mission-background.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+nav h2{
+    padding: auto;
+}
+
+.tea{
+    text-align: center;
+}
+
+.images{
+    width: 1300px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+figcaption{
+    padding-top: 10px;
+    text-align: center;
+}
+
+#location{
+    height: 700px;
+    background-repeat: no-repeat;
+    text-align: center;
+    position: relative;
+}
