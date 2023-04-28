@@ -2,9 +2,14 @@
 
 The progress I am making through the online course will be recorded in this repository.
 
-date - 02/16/2022 I created this repository. 
+#CLOCK PROJECT
+- uses Date object to get hours, minutes seconds
+- worked on the UI to make it an Analog clock instead of digital.
 
-I am going to start with HTML and CSS and I will keep all the practice programs here. 
+#FlexBox Project
+- uses flexbox to style the css
+- I had recently learnt that and wanted to implement it
+- I like Grid better
 
-Update (10/12/2022)
-I have learnt HTML and CSS and Basics of JavaScript, ONTO learning react.
+#Desmotos Art Project
+- very basic HTML and CSS for a home page
