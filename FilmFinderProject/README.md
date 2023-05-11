@@ -12,4 +12,5 @@ Steps to run the app:
 
 Missing:    
 NODE MODULES    
-TMDB API KEY    
+TMDB API KEY in script.js     
+
