@@ -6,6 +6,21 @@ The progress I am making through the online course will be recorded in this repo
 - uses Date object to get hours, minutes seconds
 - worked on the UI to make it an Analog clock instead of digital.
 
+## Find Film Website
+
+- I have my own API KEY in the code( I know not the best practice)
+- Once you download the ZIP file, you need to install the dependencies in the package.json file.
+
+- Steps to run the app:   
+  1 . Open the terminal   
+  2 . Navigate to the folder that has package.json    
+  3 . In the terminal run `npm install` command   
+  4 . Next, type in `npm start` and the app should run on localhost:3000    
+
+- Missing:    
+  NODE MODULES    
+  TMDB API KEY in script.js  
+
 ## Space Invaders Game
 - Created Multiple Alien classes
 - User has three chances
