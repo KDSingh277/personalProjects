@@ -5,12 +5,26 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-const theString = "I am creating this app from scratch";
-root.render(
-  <h1>
-    {theString}
-  </h1>
-);
+function coinToss() {
+  // This function will randomly return either 'heads' or 'tails'.
+  return Math.random() < 0.5 ? 'heads' : 'tails';
+}
+
+const pics = {
+  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
+  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg'
+};
+let img;
+
+// if/else statement begins here:
+if(coinToss()== 'heads'){
+  img = (<img src={pics.kitty} />);
+}
+else{
+  img = (<img src={pics.doggy} />);
+}
+
+root.render(img);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
