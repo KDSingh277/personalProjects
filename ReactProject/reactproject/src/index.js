@@ -5,26 +5,19 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-function coinToss() {
-  // This function will randomly return either 'heads' or 'tails'.
-  return Math.random() < 0.5 ? 'heads' : 'tails';
-}
 
-const pics = {
-  kitty: 'https://content.codecademy.com/courses/React/react_photo-kitty.jpg',
-  doggy: 'https://content.codecademy.com/courses/React/react_photo-puppy.jpeg'
-};
-let img;
+const Navbar = (
+    <nav className="navbar">
+      <ul className="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  );
 
-// if/else statement begins here:
-if(coinToss()== 'heads'){
-  img = (<img src={pics.kitty} />);
-}
-else{
-  img = (<img src={pics.doggy} />);
-}
-
-root.render(img);
+root.render(Navbar);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
