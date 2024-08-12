@@ -1,0 +1,32 @@
+/* src/App.css */
+.App {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  max-width: 6000px;
+  margin: 0 auto;
+}
+
+.user-profile {
+  background-color: #eff5a0;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.user-activities {
+  background-color: #c8dc55;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.user-activities ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user-activities li {
+  background-color: #fff;
+  padding: 8px;
+  margin-bottom: 5px;
+  border-radius: 3px;
+}
