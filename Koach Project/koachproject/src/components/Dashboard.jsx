@@ -4,14 +4,14 @@ import UserProfile from './UserProfile';
 import UserActivities from './UserActivities';
 
 const Dashboard = () => {
-  const [userId, setUserId] = useState(null);  
+  const [userId, setUserId] = useState(1);  
   const [user, setUser] = useState(null);
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    console.log(`Fetching data for userId: ${userId}`);
+    console.log(`Fetching data for userId: ${userId}`)
     const fetchUserData = async () => {
       try {
         const userResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
@@ -21,7 +21,7 @@ const Dashboard = () => {
         const userData = await userResponse.json();
 
 
-        const activitiesResponse = await fetch(`https://jsonplaceholder.typicode.com/posts?${userId}`);
+        const activitiesResponse = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
         if (!activitiesResponse.ok) {
           throw new Error('Failed to fetch user activities');
         }
