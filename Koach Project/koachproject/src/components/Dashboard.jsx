@@ -21,7 +21,7 @@ const Dashboard = () => {
         const userData = await userResponse.json();
 
 
-        const activitiesResponse = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
+        const activitiesResponse = await fetch(`https://jsonplaceholder.typicode.com/posts?userId=${userId}`);
         if (!activitiesResponse.ok) {
           throw new Error('Failed to fetch user activities');
         }
