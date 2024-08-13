@@ -30,3 +30,21 @@
   margin-bottom: 5px;
   border-radius: 3px;
 }
+
+.user-navigation {
+  margin-bottom: 20px;
+}
+
+.user-navigation button {
+  margin-right: 10px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #f4f4f4;
+  transition: background-color 0.3s ease;
+}
+
+.user-navigation button:hover {
+  background-color: #ddd;
+}

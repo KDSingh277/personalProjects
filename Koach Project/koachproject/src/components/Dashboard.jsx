@@ -4,12 +4,14 @@ import UserProfile from './UserProfile';
 import UserActivities from './UserActivities';
 
 const Dashboard = () => {
+  const [userId, setUserId] = useState(null);  
   const [user, setUser] = useState(null);
   const [activities, setActivities] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    console.log(`Fetching data for userId: ${userId}`);
     const fetchUserData = async () => {
       try {
         const userResponse = await fetch('https://jsonplaceholder.typicode.com/users/1');
@@ -36,13 +38,25 @@ const Dashboard = () => {
     };
 
     fetchUserData();
-  }, []);
+  }, [userId]);
 
   if (loading) return <p>Loading...</p>;
   if (error) return <p>{error}</p>;
 
   return (
     <div className="dashboard">
+        <div className="user-navigation">
+        <button onClick={() => setUserId(1)}>User 1</button>
+        <button onClick={() => setUserId(2)}>User 2</button>
+        <button onClick={() => setUserId(3)}>User 3</button>
+        <button onClick={() => setUserId(4)}>User 4</button>
+        <button onClick={() => setUserId(5)}>User 5</button>
+        <button onClick={() => setUserId(6)}>User 6</button>
+        <button onClick={() => setUserId(7)}>User 7</button>
+        <button onClick={() => setUserId(8)}>User 8</button>
+        <button onClick={() => setUserId(9)}>User 9</button>
+        <button onClick={() => setUserId(10)}>User 10</button>
+        </div>
       {user && <UserProfile user={user} />}
       <UserActivities activities={activities} />
     </div>
