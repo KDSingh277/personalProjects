@@ -14,14 +14,14 @@ const Dashboard = () => {
     console.log(`Fetching data for userId: ${userId}`);
     const fetchUserData = async () => {
       try {
-        const userResponse = await fetch('https://jsonplaceholder.typicode.com/users/1');
+        const userResponse = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`);
         if (!userResponse.ok) {
           throw new Error('Failed to fetch user data');
         }
         const userData = await userResponse.json();
 
 
-        const activitiesResponse = await fetch('https://jsonplaceholder.typicode.com/posts?userId=1');
+        const activitiesResponse = await fetch(`https://jsonplaceholder.typicode.com/posts?${userId}`);
         if (!activitiesResponse.ok) {
           throw new Error('Failed to fetch user activities');
         }
