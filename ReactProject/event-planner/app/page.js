@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import Contact from "./components/Contact";
 
 export default function Home() {
   return (
@@ -8,7 +7,6 @@ export default function Home() {
     <div className="flex flex-col items-center justify-center py-12">
       <h1 className="text-4xl font-bold text-blue-600">Welcome to Event Planner</h1>
       <p className="mt-4 text-lg text-gray-700">Plan your perfect event with us!</p>
-      <Contact />
     </div>
   </main>
   );

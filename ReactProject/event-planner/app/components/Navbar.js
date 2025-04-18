@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Navbar(){
     return(
         <nav className="bg-black text-white px-6 py-4 flex justify-between items-center">
@@ -8,7 +10,7 @@ export default function Navbar(){
             <div className="hidden md:flex space-x-6">
                 <a href="#" className="hover:text-gray-400">Personal</a>
                 <a href="#" className="hover:text-gray-400">Small Business</a>
-                <a href="#" className="hover:text-gray-400">Contact Us</a>
+                <a href="/Contact" className="hover:text-gray-400">Contact Us</a>
                 <a href="#" className="hover:text-gray-400">Corporate</a>
             </div>
     
