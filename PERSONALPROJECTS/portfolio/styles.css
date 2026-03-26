@@ -347,6 +347,24 @@ html[data-theme="light"] .card {
 .card--flat {
   box-shadow: none;
   background: var(--surface);
+  /* Titles/tags were flush to the border; overflow:hidden clipped first glyphs */
+  padding: 18px 22px 20px;
+}
+
+.card--flat .card__title {
+  margin-bottom: 10px;
+}
+
+.card--flat .tags {
+  padding-top: 0;
+}
+
+.card--flat .muted {
+  margin: 0;
+}
+
+.card--flat .muted + .muted {
+  margin-top: 6px;
 }
 
 .card__header {
