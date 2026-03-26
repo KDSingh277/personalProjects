@@ -1,10 +1,11 @@
-name: Deploy Portfolio (GitHub Pages)
+name: Deploy GitHub Pages
 
 on:
   push:
     branches: ["main"]
     paths:
       - "PERSONALPROJECTS/portfolio/**"
+      - "FilmFinderProject/public/**"
       - ".github/workflows/portfolio-pages.yml"
   workflow_dispatch:
 
@@ -30,12 +31,26 @@ jobs:
       - name: Configure Pages
         uses: actions/configure-pages@v5
 
+      - name: Assemble static site
+        run: |
+          mkdir -p site/film-finder
+          cp -r PERSONALPROJECTS/portfolio/* site/
+          cp -r FilmFinderProject/public/* site/film-finder/
+          touch site/.nojekyll
+
+      - name: Inject TMDB API key (optional)
+        env:
+          TMDB_API_KEY: ${{ secrets.TMDB_API_KEY }}
+        run: |
+          if [ -n "$TMDB_API_KEY" ]; then
+            sed -i "s|const tmdbKey = '';|const tmdbKey = '${TMDB_API_KEY}';|" site/film-finder/js/script.js
+          fi
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "PERSONALPROJECTS/portfolio"
+          path: "site"
 
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
-

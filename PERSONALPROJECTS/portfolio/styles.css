@@ -486,6 +486,10 @@ html[data-theme="light"] .tag {
   font-size: 0.92rem;
 }
 
+.project__demo {
+  margin: 14px 0 0;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
